@@ -49,13 +49,15 @@ namespace Store
                 ,
                     BranchID = u.Branch.BranchId
                 ,
-                    RoleId = u.RoleId
+                    RoleId = u.RoleId ,
+
+                    isActive = u.isActive
                 ,
                     BranchName = u.Branch.BranchName
                 })
                 .FirstOrDefault();
 
-            if (user != null)
+            if (user != null && user.isActive)
             {
                 currentuser = CurrentUser.Instance;
 
