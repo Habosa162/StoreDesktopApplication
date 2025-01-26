@@ -89,13 +89,35 @@ namespace Store.ViewControl.CashierViews
                      Platform = p.Platform.PlatformName,
                      Category = p.Category.CategoryName,
                  }).ToList();
-            dataGridView1.DataSource = SearchProducts; 
+            dataGridView1.DataSource = SearchProducts;
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            SerachtextBox.Text = ""; 
+            SerachtextBox.Text = "";
             LoadProdutsData();
         }
-   
+
+        private void SerachtextBox_TextChanged(object sender, EventArgs e)
+        {
+            var SearchText = SerachtextBox.Text;
+            var SearchProducts = _context.Products
+                 .Include(p => p.Category)
+                 .Include(p => p.Platform)
+                 .Where(p => p.ProductName
+                 .ToLower()
+                 .Contains(SearchText.ToLower()))
+                 .Select(p => new
+                 {
+                     ID = p.ProductId,
+                     Name = p.ProductName,
+                     Price = p.ProductPrice,
+                     Quantity = p.StockQuantity,
+                     Serial_Number = p.SerialNo,
+                     Branch = p.Branch.BranchName,
+                     Platform = p.Platform.PlatformName,
+                     Category = p.Category.CategoryName,
+                 }).ToList();
+            dataGridView1.DataSource = SearchProducts;
+        }
     }
 }

@@ -153,3 +153,4 @@ E:\I T I\EF\Project\Store\Store\obj\Debug\net9.0-windows10.0.17763.0\Store.ViewC
 E:\I T I\EF\Project\Store\Store\bin\Debug\net9.0-windows10.0.17763.0\itextsharp.dll
 E:\I T I\EF\Project\Store\Store\bin\Debug\net9.0-windows10.0.17763.0\BouncyCastle.Cryptography.dll
 E:\I T I\EF\Project\Store\Store\obj\Debug\net9.0-windows10.0.17763.0\Store.ViewControl.CashierViews.TransActionsView.resources
+E:\I T I\EF\Project\Store\Store\obj\Debug\net9.0-windows10.0.17763.0\Store.sourcelink.json

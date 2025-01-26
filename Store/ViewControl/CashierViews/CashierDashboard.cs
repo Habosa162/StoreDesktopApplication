@@ -58,8 +58,9 @@ namespace Store.ViewControl
         private void button2_Click(object sender, EventArgs e)
         {
             TransactionSummary transactionSummary = new TransactionSummary();
-            string transactionsPath = @$"E:\I T I\EF\Project\Store\DailyReport\TransactionSummary.pdf";
+            string transactionsPath = @$"E:\I T I\EF\Project\Store\DailyReport\{DateTime.Now.ToString("yyyyMMdd_HHmmss")}TransactionSummary.pdf";
             transactionSummary.GenerateTransactionSummaryPDF(transactionsPath);
+            MessageBox.Show("PDF has been saved successfully"); 
         }
     }
 }

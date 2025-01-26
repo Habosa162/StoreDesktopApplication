@@ -46,29 +46,34 @@
             // 
             // Search
             // 
-            Search.Location = new Point(584, 89);
+            Search.BackColor = Color.YellowGreen;
+            Search.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold);
+            Search.Location = new Point(623, 105);
             Search.Name = "Search";
-            Search.Size = new Size(85, 23);
+            Search.Size = new Size(102, 37);
             Search.TabIndex = 1;
             Search.Text = "Search";
-            Search.UseVisualStyleBackColor = true;
+            Search.UseVisualStyleBackColor = false;
             Search.Click += Search_Click;
             // 
             // SerachtextBox
             // 
-            SerachtextBox.Location = new Point(429, 89);
+            SerachtextBox.Location = new Point(425, 113);
             SerachtextBox.Name = "SerachtextBox";
-            SerachtextBox.Size = new Size(135, 23);
+            SerachtextBox.Size = new Size(183, 23);
             SerachtextBox.TabIndex = 2;
+            SerachtextBox.TextChanged += SerachtextBox_TextChanged;
             // 
             // button1
             // 
-            button1.Location = new Point(689, 88);
+            button1.BackColor = Color.IndianRed;
+            button1.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold);
+            button1.Location = new Point(731, 105);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(88, 37);
             button1.TabIndex = 3;
             button1.Text = "Clear";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // InventoryView
