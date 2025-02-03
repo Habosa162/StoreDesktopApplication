@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Store.Models.Context;
 
@@ -11,9 +12,11 @@ using Store.Models.Context;
 namespace Store.Migrations
 {
     [DbContext(typeof(PlaystationStoreContext))]
-    partial class PlaystationStoreContextModelSnapshot : ModelSnapshot
+    [Migration("20250202184556_AddCondtionTable")]
+    partial class AddCondtionTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

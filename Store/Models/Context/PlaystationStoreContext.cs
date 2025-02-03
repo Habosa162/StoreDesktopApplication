@@ -14,8 +14,6 @@ namespace Store.Models.Context
 {
     public class PlaystationStoreContext : DbContext
     {
-
-        
         public virtual DbSet<SystemUser> SystemUsers { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Branch> Branches { get; set; }
@@ -27,9 +25,8 @@ namespace Store.Models.Context
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Transaction> Transactions { get; set; }
-
         public virtual DbSet<TransactionType> TransactionTypes { get; set; }
-
+        public virtual DbSet<Condition> Conditions { get; set; }
 
 
 

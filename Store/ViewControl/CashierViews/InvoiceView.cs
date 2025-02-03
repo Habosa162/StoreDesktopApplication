@@ -18,7 +18,6 @@ namespace Store.ViewControl
         public InvoiceView()
         {
             InitializeComponent();
-
         }
 
         void LoadInvoiceItems()

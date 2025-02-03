@@ -18,6 +18,9 @@ namespace Store.Models.ProductModels
         public int StockQuantity { get; set; }
         public string? SerialNo { get; set; }
 
+
+
+
         [ForeignKey("Branch")]
         public int BranchId { get; set; }
 
@@ -27,10 +30,17 @@ namespace Store.Models.ProductModels
         [ForeignKey("Category")]
         public int CategoryId { get; set; }
 
+        //[ForeignKey("Condition")]
+        //public int? ConditionId { get; set; }
+
 
         public virtual Branch Branch { get; set; }
         public virtual Category Category { get; set; }
         public virtual Platform Platform { get; set; }
+
+        public virtual Condition Condition { get; set; }
+
+
 
     }
 }
