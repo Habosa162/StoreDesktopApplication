@@ -36,6 +36,18 @@ namespace Store.Migrations
                     b.HasKey("BranchId");
 
                     b.ToTable("Branches");
+
+                    b.HasData(
+                        new
+                        {
+                            BranchId = 1,
+                            BranchName = "Hurghada"
+                        },
+                        new
+                        {
+                            BranchId = 2,
+                            BranchName = "Cairo"
+                        });
                 });
 
             modelBuilder.Entity("Store.Models.Customer", b =>
@@ -153,6 +165,18 @@ namespace Store.Migrations
                     b.HasKey("ConditionId");
 
                     b.ToTable("Conditions");
+
+                    b.HasData(
+                        new
+                        {
+                            ConditionId = 1,
+                            condition = "New"
+                        },
+                        new
+                        {
+                            ConditionId = 2,
+                            condition = "Used"
+                        });
                 });
 
             modelBuilder.Entity("Store.Models.ProductModels.DeviceMaintenance", b =>
@@ -329,6 +353,18 @@ namespace Store.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Name = "admin"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Name = "cashier"
+                        });
                 });
 
             modelBuilder.Entity("Store.Models.User.SystemUser", b =>
@@ -355,6 +391,24 @@ namespace Store.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("SystemUsers");
+
+                    b.HasData(
+                        new
+                        {
+                            UserName = "Admin",
+                            BranchId = 1,
+                            PassWord = "joystick112233",
+                            RoleId = 1,
+                            isActive = true
+                        },
+                        new
+                        {
+                            UserName = "cash",
+                            BranchId = 1,
+                            PassWord = "cash",
+                            RoleId = 2,
+                            isActive = true
+                        });
                 });
 
             modelBuilder.Entity("Store.Models.InvoiceModels.Invoice", b =>

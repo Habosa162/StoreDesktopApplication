@@ -43,16 +43,11 @@ namespace Store
                 .Include(b => b.Branch)
                 .Select(u => new
                 {
-                    Username = u.UserName
-                ,
-                    Role = u.Role.Name
-                ,
-                    BranchID = u.Branch.BranchId
-                ,
+                    Username = u.UserName,
+                    Role = u.Role.Name,
+                    BranchID = u.Branch.BranchId,
                     RoleId = u.RoleId ,
-
-                    isActive = u.isActive
-                ,
+                    isActive = u.isActive,
                     BranchName = u.Branch.BranchName
                 })
                 .FirstOrDefault();
@@ -60,7 +55,6 @@ namespace Store
             if (user != null && user.isActive)
             {
                 currentuser = CurrentUser.Instance;
-
 
                 currentuser.Role = user.Role;
                 currentuser.UserName = user.Username;
@@ -88,9 +82,7 @@ namespace Store
             {
                 MessageBox.Show("Wrong username or password");
             }
-
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
        

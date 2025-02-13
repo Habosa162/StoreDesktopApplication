@@ -38,6 +38,7 @@ namespace Store.ViewControl.AdminViews
                 .Include(p => p.Branch)
                 .Include(p => p.Category)
                 .Include(p => p.Platform)
+                .Include(p=>p.Condition)
                 .Select(p => new
                 {
                     ID = p.ProductId,
@@ -48,10 +49,29 @@ namespace Store.ViewControl.AdminViews
                     Branch = p.Branch.BranchName,
                     Platform = p.Platform.PlatformName,
                     Category = p.Category.CategoryName,
+                    Condition = p.Condition.condition
                 }).ToList();
             dataGridView1.DataSource = AllBranchesProducts;
         }
 
+
+        private void LoadConditionsforDataAtComboBox()
+        {
+            try
+            {
+                var conditions = _context.Conditions
+                    .Select(c => new { ID = c.ConditionId, Name = c.condition})
+                    .ToList();
+
+                ConditionComboBox.DataSource = conditions;
+                ConditionComboBox.DisplayMember = "Name";
+                ConditionComboBox.ValueMember = "ID";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while loading conditions: {ex.Message}");
+            }
+        }
 
 
         //Data FOR COMBOX
@@ -118,6 +138,7 @@ namespace Store.ViewControl.AdminViews
             PlatFormComboBox.SelectedIndex = -1;
             CategoryComboBox.SelectedIndex = -1;
             BranchComboBox.SelectedIndex = -1;
+            ConditionComboBox.SelectedIndex = -1;
         }
         
         //When the Form is Laoded 
@@ -127,6 +148,7 @@ namespace Store.ViewControl.AdminViews
             LoadPlatformsforDataAtComboBox();
             LoadCategoryDataAtComboBox();
             LoadBranchesforDataAtComboBox();
+            LoadConditionsforDataAtComboBox(); 
         }
         private void AddProduct_Click(object sender, EventArgs e)
         {
@@ -140,7 +162,9 @@ namespace Store.ViewControl.AdminViews
                 {
                     if (PlatFormComboBox.SelectedValue is int platformId &&
                         CategoryComboBox.SelectedValue is int categoryId &&
-                        BranchComboBox.SelectedValue is int branchId)
+                        BranchComboBox.SelectedValue is int branchId &&
+                        ConditionComboBox.SelectedValue is int condID
+                        )
                     {
                         var newProduct = new Product
                         {
@@ -150,7 +174,8 @@ namespace Store.ViewControl.AdminViews
                             StockQuantity = productQuantity,
                             BranchId = branchId,
                             PlatformId = platformId,
-                            CategoryId = categoryId
+                            CategoryId = categoryId,
+                            ConditionId = condID
                         };
 
                         _context.Products.Add(newProduct);
@@ -189,6 +214,7 @@ namespace Store.ViewControl.AdminViews
                 Product.BranchId = (int)BranchComboBox.SelectedValue;
                 Product.CategoryId = (int)CategoryComboBox.SelectedValue;
                 Product.PlatformId = (int)PlatFormComboBox.SelectedValue;
+                Product.ConditionId = (int)ConditionComboBox.SelectedValue;
                 _context.Products.Update(Product);
                 _context.SaveChanges();
                 LoadProdutsData();
@@ -221,6 +247,7 @@ namespace Store.ViewControl.AdminViews
                 BranchComboBox.SelectedValue = curentProduct.BranchId;
                 PlatFormComboBox.SelectedValue = curentProduct.PlatformId;
                 CategoryComboBox.SelectedValue = curentProduct.CategoryId;
+                ConditionComboBox.SelectedValue = curentProduct.ConditionId;  
                 // Retrieve the Product ID from the selected row
              
             }

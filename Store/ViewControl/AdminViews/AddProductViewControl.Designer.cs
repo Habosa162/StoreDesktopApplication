@@ -46,6 +46,8 @@
             CategoryComboBox = new ComboBox();
             label7 = new Label();
             serialNoTextBox = new TextBox();
+            label8 = new Label();
+            ConditionComboBox = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -219,11 +221,31 @@
             serialNoTextBox.Size = new Size(182, 25);
             serialNoTextBox.TabIndex = 31;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            label8.Location = new Point(658, 15);
+            label8.Name = "label8";
+            label8.Size = new Size(69, 17);
+            label8.TabIndex = 32;
+            label8.Text = "Condition";
+            // 
+            // ConditionComboBox
+            // 
+            ConditionComboBox.FormattingEnabled = true;
+            ConditionComboBox.Location = new Point(728, 12);
+            ConditionComboBox.Name = "ConditionComboBox";
+            ConditionComboBox.Size = new Size(182, 25);
+            ConditionComboBox.TabIndex = 33;
+            // 
             // AddProductViewControl
             // 
             AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 510);
+            Controls.Add(ConditionComboBox);
+            Controls.Add(label8);
             Controls.Add(serialNoTextBox);
             Controls.Add(label7);
             Controls.Add(CategoryComboBox);
@@ -271,5 +293,7 @@
         private ComboBox CategoryComboBox;
         private Label label7;
         private TextBox serialNoTextBox;
+        private Label label8;
+        private ComboBox ConditionComboBox;
     }
 }

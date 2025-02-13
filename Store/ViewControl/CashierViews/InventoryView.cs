@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 
 namespace Store.ViewControl.CashierViews
@@ -52,6 +53,7 @@ namespace Store.ViewControl.CashierViews
             var AllBranchesProducts = _context.Products
                 .Include(p => p.Category)
                 .Include(p => p.Platform)
+                .Include(p=>p.Condition)
                 .Select(p => new
                 {
                     ID = p.ProductId,
@@ -62,6 +64,7 @@ namespace Store.ViewControl.CashierViews
                     Branch = p.Branch.BranchName,
                     Platform = p.Platform.PlatformName,
                     Category = p.Category.CategoryName,
+                    Condition = p.Condition.condition,
                 }).ToList();
             dataGridView1.DataSource = AllBranchesProducts;
         }
@@ -103,6 +106,7 @@ namespace Store.ViewControl.CashierViews
             var SearchProducts = _context.Products
                  .Include(p => p.Category)
                  .Include(p => p.Platform)
+                 .Include(p=>p.Condition)
                  .Where(p => p.ProductName
                  .ToLower()
                  .Contains(SearchText.ToLower()))
@@ -116,6 +120,7 @@ namespace Store.ViewControl.CashierViews
                      Branch = p.Branch.BranchName,
                      Platform = p.Platform.PlatformName,
                      Category = p.Category.CategoryName,
+                     Condition = p.Condition.condition
                  }).ToList();
             dataGridView1.DataSource = SearchProducts;
         }

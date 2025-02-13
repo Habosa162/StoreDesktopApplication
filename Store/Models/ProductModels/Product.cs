@@ -30,8 +30,8 @@ namespace Store.Models.ProductModels
         [ForeignKey("Category")]
         public int CategoryId { get; set; }
 
-        //[ForeignKey("Condition")]
-        //public int? ConditionId { get; set; }
+        [ForeignKey("Condition")]
+        public int? ConditionId { get; set; }
 
 
         public virtual Branch Branch { get; set; }

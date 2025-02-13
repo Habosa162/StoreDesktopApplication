@@ -127,7 +127,7 @@ namespace Store.ViewControl
                 try
                 {
 
-                    using (FileStream fs = new FileStream(@$"E:\I T I\EF\Project\Store\invoices\invoice{_invoice.InvoiceId}.pdf", FileMode.Create, FileAccess.Write, FileShare.None))
+                    using (FileStream fs = new FileStream(@$"..\Invoices\invoice{_invoice.InvoiceId}.pdf", FileMode.Create, FileAccess.Write, FileShare.None))
                     {
                         Document document = new Document();
                         PdfWriter writer = PdfWriter.GetInstance(document, fs);
@@ -135,7 +135,7 @@ namespace Store.ViewControl
 
 
                         // Add logo
-                        string logoPath = @"E:\I T I\EF\Project\Store\imgs\logo.png";
+                        string logoPath = @".\imgs\logo.png";
                         iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(logoPath);
                         //iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(Properties.Resources);
                         logo.ScaleToFit(140f, 120f);
@@ -197,7 +197,6 @@ namespace Store.ViewControl
                 {
                     summary.AppendLine($"Product Name : {it.Product.ProductName}");
                     summary.AppendLine($"Product Quantity : {it.ItemQuantity}");
-
                 }
 
                 if (it.DeviceMaintenance != null)
@@ -218,7 +217,6 @@ namespace Store.ViewControl
             summary.AppendLine($"Username : {CurrentUser.Instance.UserName}");
             summary.AppendLine($"Customer Customer Name : {_context.Customers.FirstOrDefault(c=>c.phoneNo==invoice.CustomerPhoneNumber).Name}");
             summary.AppendLine($"Customer Phone Number : {invoice.CustomerPhoneNumber}\n");
-            
             summary.AppendLine("Thank you for your purchase!");
             return summary.ToString();
         }

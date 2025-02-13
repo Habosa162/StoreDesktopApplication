@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "E:\\I T I\\EF\\Project\\Store\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{68269D5A-6165-4AE5-B1ED-5A098B2F08E1}|Store\\Store.csproj|e:\\i t i\\ef\\project\\store\\store\\models\\context\\playstationstorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68269D5A-6165-4AE5-B1ED-5A098B2F08E1}|Store\\Store.csproj|solutionrelative:store\\models\\context\\playstationstorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68269D5A-6165-4AE5-B1ED-5A098B2F08E1}|Store\\Store.csproj|e:\\i t i\\ef\\project\\store\\store\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68269D5A-6165-4AE5-B1ED-5A098B2F08E1}|Store\\Store.csproj|solutionrelative:store\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68269D5A-6165-4AE5-B1ED-5A098B2F08E1}|Store\\Store.csproj|e:\\i t i\\ef\\project\\store\\store\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{68269D5A-6165-4AE5-B1ED-5A098B2F08E1}|Store\\Store.csproj|solutionrelative:store\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,15 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PlaystationStoreContext.cs",
-              "DocumentMoniker": "E:\\I T I\\EF\\Project\\Store\\Store\\Models\\Context\\PlaystationStoreContext.cs",
-              "RelativeDocumentMoniker": "Store\\Models\\Context\\PlaystationStoreContext.cs",
-              "ToolTip": "E:\\I T I\\EF\\Project\\Store\\Store\\Models\\Context\\PlaystationStoreContext.cs",
-              "RelativeToolTip": "Store\\Models\\Context\\PlaystationStoreContext.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAuwB8AAAAAAAAAAAAAAA==",
+              "Title": "Form1.cs",
+              "DocumentMoniker": "E:\\I T I\\EF\\Project\\Store\\Store\\Form1.cs",
+              "RelativeDocumentMoniker": "Store\\Form1.cs",
+              "ToolTip": "E:\\I T I\\EF\\Project\\Store\\Store\\Form1.cs",
+              "RelativeToolTip": "Store\\Form1.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAD4vz4AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T14:28:45.562Z",
+              "WhenOpened": "2025-02-13T21:28:09.618Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "E:\\I T I\\EF\\Project\\Store\\Store\\Form1.cs",
+              "RelativeDocumentMoniker": "Store\\Form1.cs",
+              "ToolTip": "E:\\I T I\\EF\\Project\\Store\\Store\\Form1.cs [Design]",
+              "RelativeToolTip": "Store\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T21:28:04.855Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

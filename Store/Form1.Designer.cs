@@ -39,7 +39,7 @@
             // usernameTextBox
             // 
             usernameTextBox.Font = new Font("Segoe UI", 12F);
-            usernameTextBox.Location = new Point(525, 187);
+            usernameTextBox.Location = new Point(525, 121);
             usernameTextBox.Name = "usernameTextBox";
             usernameTextBox.PlaceholderText = "Enter your username...";
             usernameTextBox.Size = new Size(182, 29);
@@ -49,7 +49,7 @@
             // passwordTextBox
             // 
             passwordTextBox.Font = new Font("Segoe UI", 12F);
-            passwordTextBox.Location = new Point(525, 242);
+            passwordTextBox.Location = new Point(525, 176);
             passwordTextBox.Name = "passwordTextBox";
             passwordTextBox.PasswordChar = '*';
             passwordTextBox.PlaceholderText = "Enter your password...";
@@ -61,9 +61,9 @@
             // 
             LoginBtn.BackColor = Color.SteelBlue;
             LoginBtn.FlatStyle = FlatStyle.System;
-            LoginBtn.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            LoginBtn.Font = new Font("Segoe UI Black", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LoginBtn.ForeColor = SystemColors.ControlLightLight;
-            LoginBtn.Location = new Point(549, 308);
+            LoginBtn.Location = new Point(549, 242);
             LoginBtn.Name = "LoginBtn";
             LoginBtn.Size = new Size(130, 48);
             LoginBtn.TabIndex = 2;
@@ -74,9 +74,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-1, 1);
+            pictureBox1.Location = new Point(-1, -7);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(458, 468);
+            pictureBox1.Size = new Size(469, 476);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
@@ -86,10 +86,10 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(802, 464);
+            Controls.Add(pictureBox1);
             Controls.Add(LoginBtn);
             Controls.Add(passwordTextBox);
             Controls.Add(usernameTextBox);
-            Controls.Add(pictureBox1);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;

@@ -35,6 +35,7 @@ namespace Store.ViewControl
                 .Include(p => p.Branch)
                 .Include(p => p.Category)
                 .Include(p => p.Platform)
+                .Include(p => p.Condition)
                 .Select(p => new
                 {
                     ID = p.ProductId,
@@ -44,7 +45,8 @@ namespace Store.ViewControl
                     Serial_Number = p.SerialNo,
                     Branch = p.Branch.BranchName,
                     Category = p.Category.CategoryName,
-                    Platform = p.Platform.PlatformName
+                    Platform = p.Platform.PlatformName,
+                    Condition = p.Condition.condition
                 })
                 .ToList();
             dataGridView1.DataSource = products;
@@ -88,7 +90,7 @@ namespace Store.ViewControl
 
                 //Add invoice Item to the invoice
                 invoice.invoiceItems.Add(invoiceItem);
-                 
+
 
                 if (invoice.InvoiceId == 0)
                 {
@@ -96,7 +98,7 @@ namespace Store.ViewControl
                 }
                 else
                 {
-                    _context.ChangeTracker.Clear(); 
+                    _context.ChangeTracker.Clear();
                     _context.Invoices.Update(invoice);
                 }
 
@@ -136,6 +138,31 @@ namespace Store.ViewControl
                 // Retrieve the Product ID from the selected row
 
             }
+        }
+
+        private void SerachtextBox_TextChanged(object sender, EventArgs e)
+        {
+            var SearchText = SerachtextBox.Text;
+            var SearchProducts = _context.Products
+                 .Include(p => p.Category)
+                 .Include(p => p.Platform)
+                 .Include(p=>p.Condition)
+                 .Where(p => p.ProductName
+                 .ToLower()
+                 .Contains(SearchText.ToLower()))
+                 .Select(p => new
+                 {
+                     ID = p.ProductId,
+                     Name = p.ProductName,
+                     Price = p.ProductPrice,
+                     Quantity = p.StockQuantity,
+                     Serial_Number = p.SerialNo,
+                     Branch = p.Branch.BranchName,
+                     Platform = p.Platform.PlatformName,
+                     Category = p.Category.CategoryName,
+                     Condition = p.Condition.condition
+                 }).ToList();
+            dataGridView1.DataSource = SearchProducts;
         }
     }
 }
