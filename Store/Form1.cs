@@ -62,7 +62,7 @@ namespace Store
                 currentuser.RoleId = user.RoleId;
                 currentuser.Branch = user.BranchName; 
 
-                if (user.Role == "Cashier")
+                if (user.Role == "cashier")
                 //if (true)
                 {
 
@@ -70,7 +70,7 @@ namespace Store
                     ChDB.Show();
                     //this.Close(); 
                 }
-                else if (user.Role == "Admin")
+                else if (user.Role == "admin")
                 {
                     AdminDashboard adminDashboard = new AdminDashboard();
                     adminDashboard.Show();
