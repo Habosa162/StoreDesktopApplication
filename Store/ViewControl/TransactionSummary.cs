@@ -88,18 +88,18 @@ namespace Store.ViewControl
             doc.Add(new Paragraph("Transactions:"));
             foreach (var transaction in transactions)
             {
-                doc.Add(new Paragraph($"ID: {transaction.Id}, Description: {transaction.Description}, Date: {transaction.Date:yyyy-MM-dd HH:mm:ss}, Value: {transaction.value:C}, Type: {transaction.TransactionType.type}"));
+                doc.Add(new Paragraph($"ID: {transaction.Id}, Description: {transaction.Description}, Date: {transaction.Date:yyyy-MM-dd HH:mm:ss}, Value: {transaction.value} EGP, Type: {transaction.TransactionType.type}"));
             }
 
             doc.Add(new Paragraph("Invoices:"));
             foreach (var invoice in invoices)
             {
-                doc.Add(new Paragraph($"ID: {invoice.InvoiceId}, Date: {invoice.Date:yyyy-MM-dd HH:mm:ss}, Total Amount: {invoice.TotalAmount:C}"));
+                doc.Add(new Paragraph($"ID: {invoice.InvoiceId}, Date: {invoice.Date:yyyy-MM-dd HH:mm:ss}, Total Amount: {invoice.TotalAmount} EGP"));
             }
 
-            doc.Add(new Paragraph($"Total Expenses: {summary.TotalExpenses:C}"));
-            doc.Add(new Paragraph($"Total Purchases: {summary.TotalPurchases:C}"));
-            doc.Add(new Paragraph($"Total Income: {summary.TotalIncome:C}"));
+            doc.Add(new Paragraph($"Total Expenses: {summary.TotalExpenses} EGP"));
+            doc.Add(new Paragraph($"Total Purchases: {summary.TotalPurchases} EGP"));
+            doc.Add(new Paragraph($"Total Income: {summary.TotalIncome} EGP"));
 
             doc.Close();
         }

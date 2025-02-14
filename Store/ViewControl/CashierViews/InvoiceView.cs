@@ -151,7 +151,6 @@ namespace Store.ViewControl
                         document.Add(title);
 
                         iTextSharp.text.Font contentFont = FontFactory.GetFont(FontFactory.TIMES, 14, BaseColor.BLACK);
-
                         Paragraph content = new Paragraph(invoiceSummary, contentFont);
 
                         content.SpacingBefore = 20f;
@@ -205,13 +204,13 @@ namespace Store.ViewControl
                     summary.AppendLine($"Device Serial Number : {it.DeviceMaintenance.DeviceSerialNo}");
                 }
 
-                summary.AppendLine($"Value : {it.InvoiceItemPrice:C}\n");
+                summary.AppendLine($"Value : {it.InvoiceItemPrice} EGP\n");
             }
 
             // Add invoice header and footer information
             summary.AppendLine($"\n\n\nInvoice #{invoice.InvoiceId}");
             summary.AppendLine($"Checked Out On : {invoice.CheckOutDate:yyyy-MM-dd}");
-            summary.AppendLine($"Total Amount : {invoice.TotalAmount:C}");
+            summary.AppendLine($"Total Amount : {invoice.TotalAmount} EGP");
             summary.AppendLine($"Number of Items : {invoice.invoiceItems.Count}\n");
             summary.AppendLine($"Branch : {CurrentUser.Instance.Branch}");
             summary.AppendLine($"Username : {CurrentUser.Instance.UserName}");
@@ -220,10 +219,6 @@ namespace Store.ViewControl
             summary.AppendLine("Thank you for your purchase!");
             return summary.ToString();
         }
-
-
-
-
 
     }
 }
