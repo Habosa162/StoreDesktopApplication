@@ -35,7 +35,7 @@ namespace Store.Models.Context
             //optionsBuilder.UseSqlServer("Data Source=DESKTOP-BPQ7J2U\\SQLEXPRESS;Initial Catalog=PlaystationStore;Integrated Security=True;Encrypt=False");
 
         }
-        
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Branch>().HasData(SeedDataBranches());

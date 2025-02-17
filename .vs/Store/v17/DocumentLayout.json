@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "E:\\I T I\\EF\\Project\\Store\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{68269D5A-6165-4AE5-B1ED-5A098B2F08E1}|Store\\Store.csproj|e:\\i t i\\ef\\project\\store\\store\\viewcontrol\\currentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68269D5A-6165-4AE5-B1ED-5A098B2F08E1}|Store\\Store.csproj|solutionrelative:store\\viewcontrol\\currentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68269D5A-6165-4AE5-B1ED-5A098B2F08E1}|Store\\Store.csproj|e:\\i t i\\ef\\project\\store\\store\\models\\context\\playstationstorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68269D5A-6165-4AE5-B1ED-5A098B2F08E1}|Store\\Store.csproj|solutionrelative:store\\models\\context\\playstationstorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{68269D5A-6165-4AE5-B1ED-5A098B2F08E1}|Store\\Store.csproj|e:\\i t i\\ef\\project\\store\\store\\viewcontrol\\transactionsummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68269D5A-6165-4AE5-B1ED-5A098B2F08E1}|Store\\Store.csproj|solutionrelative:store\\viewcontrol\\transactionsummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -30,28 +38,53 @@
       "DocumentGroups": [
         {
           "DockedWidth": 94,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TransactionSummary.cs",
-              "DocumentMoniker": "E:\\I T I\\EF\\Project\\Store\\Store\\ViewControl\\TransactionSummary.cs",
-              "RelativeDocumentMoniker": "Store\\ViewControl\\TransactionSummary.cs",
-              "ToolTip": "E:\\I T I\\EF\\Project\\Store\\Store\\ViewControl\\TransactionSummary.cs",
-              "RelativeToolTip": "Store\\ViewControl\\TransactionSummary.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T00:05:25.648Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "CurrentUser.cs",
+              "DocumentMoniker": "E:\\I T I\\EF\\Project\\Store\\Store\\ViewControl\\CurrentUser.cs",
+              "RelativeDocumentMoniker": "Store\\ViewControl\\CurrentUser.cs",
+              "ToolTip": "E:\\I T I\\EF\\Project\\Store\\Store\\ViewControl\\CurrentUser.cs",
+              "RelativeToolTip": "Store\\ViewControl\\CurrentUser.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T23:34:22.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlaystationStoreContext.cs",
+              "DocumentMoniker": "E:\\I T I\\EF\\Project\\Store\\Store\\Models\\Context\\PlaystationStoreContext.cs",
+              "RelativeDocumentMoniker": "Store\\Models\\Context\\PlaystationStoreContext.cs",
+              "ToolTip": "E:\\I T I\\EF\\Project\\Store\\Store\\Models\\Context\\PlaystationStoreContext.cs",
+              "RelativeToolTip": "Store\\Models\\Context\\PlaystationStoreContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T22:31:02.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TransactionSummary.cs",
+              "DocumentMoniker": "E:\\I T I\\EF\\Project\\Store\\Store\\ViewControl\\TransactionSummary.cs",
+              "RelativeDocumentMoniker": "Store\\ViewControl\\TransactionSummary.cs",
+              "ToolTip": "E:\\I T I\\EF\\Project\\Store\\Store\\ViewControl\\TransactionSummary.cs",
+              "RelativeToolTip": "Store\\ViewControl\\TransactionSummary.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T00:05:25.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "InvoiceView.cs",
               "DocumentMoniker": "E:\\I T I\\EF\\Project\\Store\\Store\\ViewControl\\CashierViews\\InvoiceView.cs",
               "RelativeDocumentMoniker": "Store\\ViewControl\\CashierViews\\InvoiceView.cs",
@@ -64,19 +97,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "InvoiceView.cs [Design]",
               "DocumentMoniker": "E:\\I T I\\EF\\Project\\Store\\Store\\ViewControl\\CashierViews\\InvoiceView.cs",
               "RelativeDocumentMoniker": "Store\\ViewControl\\CashierViews\\InvoiceView.cs",
               "ToolTip": "E:\\I T I\\EF\\Project\\Store\\Store\\ViewControl\\CashierViews\\InvoiceView.cs [Design]",
               "RelativeToolTip": "Store\\ViewControl\\CashierViews\\InvoiceView.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T21:50:44.091Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-13T21:50:44.091Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CashierDashboard.cs",
               "DocumentMoniker": "E:\\I T I\\EF\\Project\\Store\\Store\\ViewControl\\CashierViews\\CashierDashboard.cs",
               "RelativeDocumentMoniker": "Store\\ViewControl\\CashierViews\\CashierDashboard.cs",
@@ -89,15 +121,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "CashierDashboard.cs [Design]",
               "DocumentMoniker": "E:\\I T I\\EF\\Project\\Store\\Store\\ViewControl\\CashierViews\\CashierDashboard.cs",
               "RelativeDocumentMoniker": "Store\\ViewControl\\CashierViews\\CashierDashboard.cs",
               "ToolTip": "E:\\I T I\\EF\\Project\\Store\\Store\\ViewControl\\CashierViews\\CashierDashboard.cs [Design]",
               "RelativeToolTip": "Store\\ViewControl\\CashierViews\\CashierDashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T21:50:03.244Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-13T21:50:03.244Z"
             }
           ]
         }
