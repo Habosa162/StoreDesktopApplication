@@ -31,7 +31,7 @@ namespace Store.Models.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("Data Source=den1.mssql7.gear.host;Initial Catalog=joystick;Persist Security Info=True;User ID=joystick;Password=Fc8C~O6yuv~5;Trust Server Certificate=True");
+            optionsBuilder.UseSqlServer("Data Source=den1.mssql7.gear.host;Initial Catalog=joystick;Persist Security Info=True;User ID=joystick;Password=Ua55r4h~Wr0_;Trust Server Certificate=True");
             //optionsBuilder.UseSqlServer("Data Source=DESKTOP-BPQ7J2U\\SQLEXPRESS;Initial Catalog=PlaystationStore;Integrated Security=True;Encrypt=False");
 
         }
